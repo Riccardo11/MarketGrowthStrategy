@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:MarketGrowthStrategy.TheApp.Models"
+             xmlns:viewmodels="clr-namespace:MarketGrowthStrategy.TheApp.Features.Profile.ViewModels"
+             xmlns:templates="clr-namespace:MarketGrowthStrategy.TheApp.Features.Profile.Templates"
+             x:DataType="viewmodels:ProfileViewModel"
+             x:Class="MarketGrowthStrategy.TheApp.Features.Profile.View.ProfilePage"
+             BackgroundColor="{StaticResource PageBackground}"
+             Title="">
+    <ContentPage.Resources>
+        <DataTemplate  x:Key="FirstStepTemplate">
+            <templates:FirstStepTemplate/>
+        </DataTemplate>
+
+        <DataTemplate x:Key="OtherStepTemplate">
+            <templates:OtherStepTemplate />
+        </DataTemplate>
+        
+        <templates:StepTemplateSelector 
+            x:Key="StepTemplateSelector"
+            FirstStepTemplate="{StaticResource FirstStepTemplate}"
+            OtherStepTemplate="{StaticResource OtherStepTemplate}" />
+    </ContentPage.Resources>
+
+    <Grid
+        RowDefinitions="70, 80, Auto, Auto, 90, Auto, *"
+        Margin="30,20"
+        RowSpacing="20"
+        >
+        <Grid
+            Grid.Row="0"
+            ColumnDefinitions="*, 80"
+            >
+            <VerticalStackLayout
+                Grid.Column="0"
+                VerticalOptions="Center" >
+                <Label
+                    Text="Welcome back,"
+                    FontFamily="RobotoThin"
+                    TextColor="Gray"
+                    FontSize="13"
+                    />
+                <Label
+                    Text="Carolina Terner"
+                    FontFamily="RobotoBold"
+                    TextColor="Black"
+                    FontSize="16"
+                    />
+            </VerticalStackLayout>
+
+            <Grid
+                Grid.Column="1"
+                RowDefinitions="*, 25"
+                ColumnDefinitions="25, *"
+                >
+                <Image
+                    Grid.Column="0"
+                    Source="avatar.png"
+                    Grid.RowSpan="2"
+                    Grid.ColumnSpan="2"
+                    >
+                    <Image.Shadow>
+                        <Shadow
+                            Brush="Black"
+                            Offset="-30,-30"
+                            Radius="20"
+                            Opacity="0.4" />
+                    </Image.Shadow>
+                </Image>
+                <Border
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    StrokeShape="Ellipse"
+                    BackgroundColor="Black"
+                    Padding="7,2,0,0"
+                    >
+                    <Label
+                        Text="2"
+                        FontSize="13"
+                        TextColor="White"
+                        />
+                </Border>
+            </Grid>
+        </Grid>
+
+        <Grid
+            ColumnDefinitions="*, 30"
+            VerticalOptions="Center"
+            Grid.Row="1"
+            >
+            <Image
+                Source="search_icon.png"
+                Grid.Column="1"
+                Margin="0,0,10,0"
+                />
+            <Border
+                StrokeShape="RoundRectangle 20"
+                VerticalOptions="Center"
+                Grid.ColumnSpan="2"
+                >
+                <Entry
+                    Placeholder="Try to Find"
+                    />
+                </Border>
+                <Grid.Shadow>
+                    <Shadow
+                        Brush="Black"
+                        Offset="-0,-0"
+                        Radius="20"
+                        Opacity="0.4" />
+                </Grid.Shadow>
+            </Grid>
+
+        <Label
+            Style="{StaticResource TitleLabelStyle}"
+            Text="Task-based explanation process"
+            Grid.Row="3"
+            />
+
+        <CollectionView
+            ItemsLayout="HorizontalList"
+            ItemsSource="{Binding Steps}"
+            Grid.Row="4"
+            ItemTemplate="{StaticResource StepTemplateSelector}"
+            />
+
+        <Label
+            Style="{StaticResource TitleLabelStyle}"
+            Text="Flow list"
+            Grid.Row="5"
+            />
+
+        <CollectionView
+            ItemsSource="{Binding Flows}"
+            Grid.Row="6"
+            >
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <templates:FlowItemTemplate />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
+</ContentPage>

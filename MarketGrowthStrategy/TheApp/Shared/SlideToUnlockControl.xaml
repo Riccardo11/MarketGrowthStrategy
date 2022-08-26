@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:MarketGrowthStrategy.TheApp.Helpers.Converters"
+             x:Class="MarketGrowthStrategy.TheApp.Shared.SlideToUnlockControl">
+    <!-- Opacity -->
+    <ContentView.Resources>
+        <converters:SlideLabelOpacityConverter x:Key="SlideLabelOpacityConverter" />
+    </ContentView.Resources>
+
+    <Border>
+        <Border.StrokeShape>
+            <RoundRectangle CornerRadius="20" />
+        </Border.StrokeShape>
+
+        <!-- 
+            x:Name: Translation
+        -->
+        <Grid
+            x:Name="SlideGrid"
+            >
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="1,1">
+                    <GradientStop Color="Black"
+                                  Offset="0"
+                                  />
+                    <GradientStop Color="Gray"
+                                  Offset="1"
+                                  />
+                </LinearGradientBrush>
+            </Grid.Background>
+
+            <!-- 
+                x:Name: Opacity
+            -->
+            <Label
+                x:Name="SlideLabel"
+                Text="GET STARTED"
+                TextColor="White"
+                CharacterSpacing="2"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"
+                Margin="50,10"
+                >
+                <Label.Opacity>
+                    <MultiBinding Converter="{StaticResource SlideLabelOpacityConverter}">
+                        <Binding
+                            Source="{x:Reference SlideGrid}"
+                            Path="Width"
+                            />
+                        <Binding
+                            Source="{x:Reference Ellipse}"
+                            Path="TranslationX"
+                            />
+                    </MultiBinding>
+                </Label.Opacity>
+            </Label>
+
+            <!-- HeightRequest: dopo aver visto che non funziona solo con la WidthRequest -->
+            <Ellipse
+                x:Name="Ellipse"
+                Stroke="White"
+                StrokeThickness="5"
+                Fill="White"
+                HorizontalOptions="Start"
+                WidthRequest="{Binding Source={RelativeSource Self}, Path=Height}"
+                HeightRequest="{Binding Source={x:Reference SlideGrid}, Path=Height}"
+                >
+                <!-- Translation -->
+                <Ellipse.GestureRecognizers>
+                    <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated" />
+                </Ellipse.GestureRecognizers>
+            </Ellipse>
+        </Grid>
+    </Border>
+</ContentView>

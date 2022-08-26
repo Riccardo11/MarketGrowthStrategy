@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:shared="clr-namespace:MarketGrowthStrategy.TheApp.Shared"
+             BackgroundColor="{StaticResource HomeBackgroundColor}"
+             x:Class="MarketGrowthStrategy.TheApp.Features.Home.Views.HomePage">
+    <ContentPage.Content>
+        <Grid
+            RowDefinitions="*, 3*, Auto" 
+            Margin="0, 20">
+            <ContentView
+                Grid.Row="1"
+                />
+            <VerticalStackLayout
+                Grid.Row="0"
+                Spacing="5"
+                VerticalOptions="Center"
+                Margin="0,30,0,0"
+                >
+                <HorizontalStackLayout
+                    HorizontalOptions="Center"
+                    Spacing="10"
+                    >
+                    <Label
+                        Style="{StaticResource HomePageLabelStyle}"
+                        Text="Market"
+                        VerticalOptions="Center"
+                        />
+                    <Border
+                        StrokeThickness="1"
+                        StrokeShape="Polygon 20,0 40,10 40,30 20,40 0,30 0,10"
+                        StrokeLineJoin="Round"
+                        BackgroundColor="Black"
+                        >
+                        <Grid>
+                            <ContentView
+                                HeightRequest="40"
+                                WidthRequest="40"
+                                />
+                            <Polyline
+                                Points="8,30 10,30 15,20 18,40 23,30 25,30"
+                                Stroke="White"
+                                StrokeThickness="2"
+                                HorizontalOptions="Center"
+                                Margin="0,8,0,0"
+                                />
+                        </Grid>
+                       
+                    </Border>
+                </HorizontalStackLayout>
+                
+                <Label
+                    Style="{StaticResource HomePageLabelStyle}"
+                    Text="your growth"
+                    />
+                <Label
+                    Style="{StaticResource HomePageLabelStyle}"
+                    Text="strategy"
+                    />
+            </VerticalStackLayout>
+            
+            <Image
+                Source="home_image.png"
+                Grid.Row="1"
+                Margin="20"
+                />
+
+            <shared:SlideToUnlockControl
+                Grid.Row="2"
+                Margin="40, 0"
+                />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

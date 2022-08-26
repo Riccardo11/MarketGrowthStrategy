@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MarketGrowthStrategy.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MarketGrowthStrategy"
+    xmlns:home="clr-namespace:MarketGrowthStrategy.TheApp.Features.Home.Views"
+    xmlns:profile="clr-namespace:MarketGrowthStrategy.TheApp.Features.Profile.View"
+    Shell.FlyoutBehavior="Disabled">
+
+    <ShellContent
+        ContentTemplate="{DataTemplate profile:ProfilePage}"
+        Route="ProfilePage" />
+    
+    <ShellContent
+        ContentTemplate="{DataTemplate home:HomePage}"
+        Route="HomePage" />
+
+</Shell>
