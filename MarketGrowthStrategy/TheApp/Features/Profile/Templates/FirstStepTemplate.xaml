@@ -6,7 +6,7 @@
              x:Class="MarketGrowthStrategy.TheApp.Features.Profile.Templates.FirstStepTemplate">
     <Border
         StrokeThickness="0.5"
-        StrokeDashArray="5"
+        StrokeDashArray="8"
         Stroke="Black"
         StrokeShape="RoundRectangle 10"
         Padding="10"
@@ -14,6 +14,7 @@
         HeightRequest="80"
         MinimumWidthRequest="80"
         MaximumWidthRequest="120"
+        BackgroundColor="Transparent"
         >
         <Grid
             RowDefinitions="*, 2*"

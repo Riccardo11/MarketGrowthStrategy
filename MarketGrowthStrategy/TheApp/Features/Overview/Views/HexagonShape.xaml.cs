@@ -7,6 +7,9 @@ public partial class HexagonShape : ContentView
 	public HexagonShape()
 	{
 		InitializeComponent();
+#if ANDROID
+		IsVisible = false;
+#endif
 	}
 
 	public double HexagonOpacity

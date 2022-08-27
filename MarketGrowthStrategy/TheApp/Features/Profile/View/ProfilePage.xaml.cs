@@ -9,4 +9,9 @@ public partial class ProfilePage : ContentPage
 		InitializeComponent();
 		BindingContext = vm;
 	}
+
+	private void OnAvatarTapped(object sender, EventArgs e)
+	{
+		Shell.Current.GoToAsync("OverviewPage");
+	}
 }

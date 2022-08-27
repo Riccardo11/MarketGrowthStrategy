@@ -17,7 +17,11 @@
                 Grid.Column="0"
                 Source="back_icon.png"
                 HeightRequest="20"
-                />
+                >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnBackTapped"></TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
             <Label
                 Grid.Column="1"
                 Style="{StaticResource TitleLabelStyle}"
@@ -33,6 +37,7 @@
                 />
         </Grid>
 
+        
         <Grid
             Grid.Row="1"
             >

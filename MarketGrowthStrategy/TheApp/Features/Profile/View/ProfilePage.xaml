@@ -63,7 +63,7 @@
                     <Image.Shadow>
                         <Shadow
                             Brush="Black"
-                            Offset="-30,-30"
+                            Offset="5,5"
                             Radius="20"
                             Opacity="0.4" />
                     </Image.Shadow>
@@ -81,6 +81,10 @@
                         TextColor="White"
                         />
                 </Border>
+                
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnAvatarTapped"></TapGestureRecognizer>
+                </Grid.GestureRecognizers>
             </Grid>
         </Grid>
 
@@ -89,11 +93,6 @@
             VerticalOptions="Center"
             Grid.Row="1"
             >
-            <Image
-                Source="search_icon.png"
-                Grid.Column="1"
-                Margin="0,0,10,0"
-                />
             <Border
                 StrokeShape="RoundRectangle 20"
                 VerticalOptions="Center"
@@ -101,15 +100,21 @@
                 >
                 <Entry
                     Placeholder="Try to Find"
+                    BackgroundColor="White"
                     />
                 </Border>
                 <Grid.Shadow>
                     <Shadow
                         Brush="Black"
-                        Offset="-0,-0"
+                        Offset="10,10"
                         Radius="20"
-                        Opacity="0.4" />
+                        Opacity="0.2" />
                 </Grid.Shadow>
+                <Image
+                    Source="search_icon.png"
+                    Grid.Column="1"
+                    Margin="0,0,10,0"
+                    />
             </Grid>
 
         <Label

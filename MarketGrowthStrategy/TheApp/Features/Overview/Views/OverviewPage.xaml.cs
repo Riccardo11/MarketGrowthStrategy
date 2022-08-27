@@ -6,4 +6,9 @@ public partial class OverviewPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+	private async void OnBackTapped(object sender, EventArgs e)
+	{
+		await Shell.Current.GoToAsync("..");
+	}
 }

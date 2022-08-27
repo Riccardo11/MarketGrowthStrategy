@@ -5,8 +5,10 @@
     <Border
         StrokeShape="RoundRectangle 20"
         WidthRequest="7"
+        x:Name="Border"
         >
-        <Grid>
+        <Grid
+            x:Name="Grid">
             <ContentView
                 BackgroundColor="LightGrey"
                 />
