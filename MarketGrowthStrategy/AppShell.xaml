@@ -10,6 +10,10 @@
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
+        ContentTemplate="{DataTemplate home:HomePage}"
+        Route="HomePage" />
+    
+    <ShellContent
         ContentTemplate="{DataTemplate overview:OverviewPage}"
         Route="OverviewPage" />
     
@@ -17,8 +21,4 @@
         ContentTemplate="{DataTemplate profile:ProfilePage}"
         Route="ProfilePage" />
     
-    <ShellContent
-        ContentTemplate="{DataTemplate home:HomePage}"
-        Route="HomePage" />
-
 </Shell>

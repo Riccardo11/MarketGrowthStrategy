@@ -23,7 +23,7 @@ public partial class SlideToUnlockControl : ContentView
 
         if (realXTranslation >= rightBoundary - OFFSET)
         {
-            Shell.Current.DisplayAlert("Alert", "Screen unlocked", "OK");
+            Shell.Current.GoToAsync("ProfilePage");
             Ellipse.TranslateTo(0, 0);
         }
     }

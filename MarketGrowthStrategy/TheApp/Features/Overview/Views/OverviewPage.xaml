@@ -6,7 +6,7 @@
              x:Class="MarketGrowthStrategy.TheApp.Features.Overview.Views.OverviewPage"
              Title="">
     <Grid
-        RowDefinitions="70, *, 100"
+        RowDefinitions="70, *, 140"
         Margin="30, 20"
         >
         <Grid
@@ -175,6 +175,7 @@
             <Border
                 StrokeShape="RoundRectangle 20"
                 BackgroundColor="Black"
+                Margin="0,20,0,0"
                 >
                 <Grid
                     RowDefinitions="20, *"
@@ -184,12 +185,13 @@
                         TextColor="White"
                         HorizontalOptions="End"
                         Margin="0,0,10,0"
+                        VerticalTextAlignment="Center"
                         />
 
                     <VerticalStackLayout
                         Grid.Row="1"
                         VerticalOptions="Center"
-                        Margin="10,5,0,0"
+                        Margin="15,5,0,0"
                         Spacing="3"
                         >
                         <Label
@@ -209,18 +211,20 @@
             </Border>
 
             <Grid
-                Margin="0,0,0,25">
+                HorizontalOptions="Start"
+                VerticalOptions="Start"
+                WidthRequest="40"
+                HeightRequest="40">
                 <Ellipse
-                    HorizontalOptions="Start"
-                    VerticalOptions="Start"
-                    WidthRequest="50"
-                    HeightRequest="50"
                     Fill="{StaticResource HomeBackgroundColor}"
                     Margin="20,0,0,0"
+                    WidthRequest="40"
+                    HeightRequest="40"
                     />
                 <Image
                     HeightRequest="30"
                     Source="star_icon.png"
+                    Margin="20,0,0,0"
                     />
             </Grid>
         </Grid>
