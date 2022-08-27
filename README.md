@@ -3,6 +3,13 @@ This is an application written with .NET MAUI which tries to implement the scree
 
 ## Screenshots
 
+<img src="images/Screenshot1.png?raw=true" height="300" alt="Screenshot 1" />
+
+<img src="images/Screenshot2.png?raw=true" height="300" alt="Screenshot 1" />
+
+<img src="images/Screenshot3.png?raw=true" height="300" alt="Screenshot 1" />
+
+
 ## Notes
 
 Android seems to be weaker on some aspects.
