@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MarketGrowthStrategy.TheApp.Features.Overview.Views"
+             xmlns:shared="clr-namespace:MarketGrowthStrategy.TheApp.Shared"
+             x:Class="MarketGrowthStrategy.TheApp.Features.Overview.Views.OverviewPage"
+             Title="">
+    <Grid
+        RowDefinitions="70, *, 100"
+        Margin="30, 20"
+        >
+        <Grid
+            Grid.Row="0"
+            ColumnDefinitions="30, *, 30"
+            >
+            <Image
+                Grid.Column="0"
+                Source="back_icon.png"
+                HeightRequest="20"
+                />
+            <Label
+                Grid.Column="1"
+                Style="{StaticResource TitleLabelStyle}"
+                Text="Overview"
+                VerticalTextAlignment="Center"
+                HorizontalTextAlignment="Center"
+                FontSize="23"
+                />
+            <Image
+                Grid.Column="2"
+                Source="more_icon.png"
+                HeightRequest="20"
+                />
+        </Grid>
+
+        <Grid
+            Grid.Row="1"
+            >
+            <local:HexagonShape
+                HexagonOpacity="0.2"
+                />
+
+            <ContentView
+                Padding="50"
+                >
+                <local:HexagonShape
+                    HexagonOpacity="0.3"
+                    />
+            </ContentView>
+
+            <ContentView
+                Padding="100"
+                >
+                <Image
+                    Source="avatar_cropped.png"
+                    />
+            </ContentView>
+
+            <Border
+                StrokeShape="RoundRectangle 10"
+                HeightRequest="70"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"
+                MinimumWidthRequest="100"
+                BackgroundColor="{StaticResource HomeBackgroundColor}"
+                Margin="0,0,0,130"
+                >
+                <VerticalStackLayout
+                    VerticalOptions="Center"
+                    Spacing="4"
+                    >
+                    <Label
+                        FontFamily="Roboto"
+                        TextColor="Black"
+                        FontSize="12"
+                        Text="Performance"
+                        Margin="10,0,0,0"
+                        />
+
+                    <HorizontalStackLayout
+                        HorizontalOptions="Center"
+                        Spacing="10"
+                        >
+                        <shared:IndicatorView
+                            Percentage="50"
+                            HeightRequest="30"
+                            />
+                        <shared:IndicatorView
+                            Percentage="100"
+                            HeightRequest="30"
+                            />
+                        <shared:IndicatorView
+                            Percentage="30"
+                            HeightRequest="30"
+                            />
+                        <shared:IndicatorView
+                            Percentage="20"
+                            HeightRequest="30"
+                            />
+                        <shared:IndicatorView
+                            Percentage="80"
+                            HeightRequest="30"
+                            />
+                    </HorizontalStackLayout>
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <Border
+                StrokeShape="RoundRectangle 10"
+                VerticalOptions="Center"
+                HorizontalOptions="End"
+                MinimumWidthRequest="100"
+                BackgroundColor="{StaticResource HomeBackgroundColor}"
+                Margin="0,130,0,0"
+                >
+                <VerticalStackLayout
+                    Spacing="4"
+                    VerticalOptions="Center"
+                    Margin="0,10"
+                    >
+                    <Label
+                        FontFamily="Roboto"
+                        TextColor="Black"
+                        FontSize="12"
+                        Text="23"
+                        Margin="10,0,0,0"
+                        />
+                    <Label
+                        Text="Better result"
+                        FontSize="10"
+                        TextColor="Gray"
+                        Margin="10,0,0,0"
+                        />
+                </VerticalStackLayout>
+            </Border>
+
+            <Grid
+                Margin="0,-130,0,0"
+                VerticalOptions="Center"
+                HorizontalOptions="End"
+                >
+                <Ellipse
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    Fill="Black"
+                    />
+                <Image
+                    HeightRequest="30"
+                    Source="chart_icon.png"
+                    />
+            </Grid>
+
+            <Grid
+                Margin="0,130,0,0"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"
+                >
+                <Ellipse
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    Fill="Black"
+                    />
+                <Image
+                    HeightRequest="30"
+                    Source="people_icon.png"
+                    />
+            </Grid>
+        </Grid>
+
+        <Grid
+            Grid.Row="2"
+            >
+            <Border
+                StrokeShape="RoundRectangle 20"
+                BackgroundColor="Black"
+                >
+                <Grid
+                    RowDefinitions="20, *"
+                    >
+                    <Label
+                        Text="X"
+                        TextColor="White"
+                        HorizontalOptions="End"
+                        Margin="0,0,10,0"
+                        />
+
+                    <VerticalStackLayout
+                        Grid.Row="1"
+                        VerticalOptions="Center"
+                        Margin="10,5,0,0"
+                        Spacing="3"
+                        >
+                        <Label
+                            Text="Great results so far!"
+                            TextColor="White"
+                            FontFamily="RobotoBold"
+                            FontSize="15"
+                            />
+                        <Label
+                            Text="Do you want to see the full history or send the message to this member?"
+                            TextColor="Gray"
+                            FontFamily="Roboto"
+                            FontSize="13"
+                            />
+                    </VerticalStackLayout>
+                </Grid>
+            </Border>
+
+            <Grid
+                Margin="0,0,0,25">
+                <Ellipse
+                    HorizontalOptions="Start"
+                    VerticalOptions="Start"
+                    WidthRequest="50"
+                    HeightRequest="50"
+                    Fill="{StaticResource HomeBackgroundColor}"
+                    Margin="20,0,0,0"
+                    />
+                <Image
+                    HeightRequest="30"
+                    Source="star_icon.png"
+                    />
+            </Grid>
+        </Grid>
+    </Grid>
+</ContentPage>

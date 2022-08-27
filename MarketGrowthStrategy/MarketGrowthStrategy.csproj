@@ -50,8 +50,14 @@
 
     <ItemGroup>
       <None Remove="Resources\Images\avatar.png" />
+      <None Remove="Resources\Images\avatar_cropped.png" />
+      <None Remove="Resources\Images\back_icon.png" />
+      <None Remove="Resources\Images\chart_icon.png" />
+      <None Remove="Resources\Images\more_icon.png" />
+      <None Remove="Resources\Images\people_icon.png" />
       <None Remove="Resources\Images\search_icon.png" />
       <None Remove="Resources\Images\small_chart.png" />
+      <None Remove="Resources\Images\star_icon.png" />
     </ItemGroup>
 
     <ItemGroup>
@@ -59,6 +65,12 @@
     </ItemGroup>
 
     <ItemGroup>
+      <MauiXaml Update="TheApp\Features\Overview\Views\HexagonShape.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </MauiXaml>
+      <MauiXaml Update="TheApp\Features\Overview\Views\OverviewPage.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </MauiXaml>
       <MauiXaml Update="TheApp\Features\Profile\Templates\FirstStepTemplate.xaml">
         <Generator>MSBuild:Compile</Generator>
       </MauiXaml>
@@ -69,6 +81,9 @@
         <Generator>MSBuild:Compile</Generator>
       </MauiXaml>
       <MauiXaml Update="TheApp\Features\Profile\View\ProfilePage.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </MauiXaml>
+      <MauiXaml Update="TheApp\Shared\IndicatorView.xaml">
         <Generator>MSBuild:Compile</Generator>
       </MauiXaml>
       <MauiXaml Update="TheApp\Shared\SlideToUnlockControl.xaml">

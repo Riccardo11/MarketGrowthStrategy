@@ -6,6 +6,12 @@
     <ActiveDebugProfile>Windows Machine</ActiveDebugProfile>
   </PropertyGroup>
   <ItemGroup>
+    <MauiXaml Update="TheApp\Features\Overview\Views\HexagonShape.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="TheApp\Features\Overview\Views\OverviewPage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
     <MauiXaml Update="TheApp\Features\Profile\Templates\FirstStepTemplate.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
@@ -16,6 +22,9 @@
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="TheApp\Features\Profile\View\ProfilePage.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
+    <MauiXaml Update="TheApp\Shared\IndicatorView.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
     <MauiXaml Update="TheApp\Shared\SlideToUnlockControl.xaml">

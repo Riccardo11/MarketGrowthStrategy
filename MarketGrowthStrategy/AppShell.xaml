@@ -6,8 +6,13 @@
     xmlns:local="clr-namespace:MarketGrowthStrategy"
     xmlns:home="clr-namespace:MarketGrowthStrategy.TheApp.Features.Home.Views"
     xmlns:profile="clr-namespace:MarketGrowthStrategy.TheApp.Features.Profile.View"
+    xmlns:overview="clr-namespace:MarketGrowthStrategy.TheApp.Features.Overview.Views"
     Shell.FlyoutBehavior="Disabled">
 
+    <ShellContent
+        ContentTemplate="{DataTemplate overview:OverviewPage}"
+        Route="OverviewPage" />
+    
     <ShellContent
         ContentTemplate="{DataTemplate profile:ProfilePage}"
         Route="ProfilePage" />
