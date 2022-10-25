@@ -5,7 +5,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
     <!-- My styles -->
-    
+
+    <Style TargetType="ContentPage">
+        <Setter Property="BackgroundColor" Value="Red" />
+    </Style>
+
     <Style TargetType="Label" x:Key="HomePageLabelStyle">
         <Setter Property="TextColor" Value="Black" />
         <Setter Property="FontSize" Value="30" />
@@ -18,7 +22,7 @@
         <Setter Property="FontSize" Value="25" />
         <Setter Property="FontFamily" Value="RobotoBold" />
     </Style>
-    
+
     <!-- -->
     
     <Style TargetType="ActivityIndicator">
